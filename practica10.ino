@@ -25,12 +25,12 @@ void loop()
 
 	float res = sin(w*millis()/1000);
   	float freq = ((res - (-1.0)) * (MAXFREQ - MINFREQ) / (1.0 - (-1.0)) + MINFREQ);
-    digitalWrite(13, LOW);
+    	digitalWrite(13, LOW);
   	delay((1.0/freq)*50.0);
-    digitalWrite(13, HIGH);
+    	digitalWrite(13, HIGH);
   	delay((1.0/freq)*50.0);
-  	fakeTime+= 0.5;
-  	/*if(res > -0.05 && res < 0.05){
+  	/*fakeTime+= 0.5;
+  	if(res > -0.05 && res < 0.05){
   		Serial.println(millis() - taimuEstopu);
       	taimuEstopu=millis(); 
   	}*/
